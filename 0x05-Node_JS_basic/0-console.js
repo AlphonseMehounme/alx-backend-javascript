@@ -2,4 +2,4 @@ function displayMessage(arg) {
   console.log(arg);
 }
 
-displayMessage("Hello");
+module.exports = displayMessage;
