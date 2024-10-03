@@ -1,7 +1,7 @@
-const fs = require('node:fs');
+const fs = require('fs');
 
 function countStudents(path) {
-  content = fs.readFileAsync(path, 'utf-8');
+  content = fs.readFileSync(path, 'utf-8');
   console.log(content);
 }
 
