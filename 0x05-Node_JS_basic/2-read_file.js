@@ -1,8 +1,12 @@
 const fs = require('fs');
 
-function countStudents(path) {
-  content = fs.readFileSync(path, 'utf-8');
-  console.log(content);
+async function countStudents(path) {
+  try {
+    content = await fs.readFile(path, 'utf-8');
+    console.log(content);
+  } catch(error) {
+    throw new Error('Cannot load the database');
+  }
 }
 
 module.exports = countStudents;
