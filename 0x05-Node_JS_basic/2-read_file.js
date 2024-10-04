@@ -5,7 +5,7 @@ async function countStudents(path) {
     content = await fs.readFile(path, 'utf-8');
     console.log(content);
   } catch(error) {
-    throw new Error('Cannot load the database');
+    console.log(error);
   }
 }
 
